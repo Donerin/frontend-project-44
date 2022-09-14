@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import gretings from "../src/cli.js";
+/* eslint-disable no-console, import/extensions */
 
-console.log(gretings());
+import gretings from '../src/cli.js';
+
+gretings();
