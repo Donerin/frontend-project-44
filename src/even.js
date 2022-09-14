@@ -10,8 +10,8 @@ const brainEven = () => {
 
   for (let i = 0; i < 3; i += 1) {
     const value = random(50);
-    console.log(`Question ${value}`);
-    const userAnswer = readlineSync.question('Your answer ');
+    console.log(`Question: ${value}`);
+    const userAnswer = readlineSync.question('Your answer: ');
     let trueAnswer;
 
     switch (userAnswer) {
@@ -24,7 +24,7 @@ const brainEven = () => {
       default:
         trueAnswer = (value % 2 === 0) ? 'yes' : 'no';
     }
-    const wrongAnswer = `${userAnswer} is wrong answer ;(. Correct answer was ${trueAnswer}.\nLet's try again, ${userName}!`;
+    const wrongAnswer = `${userAnswer} is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${userName}!`;
 
     if ((value % 2 === 0 && userAnswer === 'yes') || (value % 2 !== 0 && userAnswer === 'no')) {
       console.log('Correct!');
