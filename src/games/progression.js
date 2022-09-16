@@ -13,7 +13,7 @@ const information = () => {
   const hiddenNumber = random(0, lengthDifference);
   let question = '';
 
-  for ( let i = 0; i < lengthDifference; i += 1) {
+  for (let i = 0; i < lengthDifference; i += 1) {
     const nextValue = headValue + difference * i;
     question = (i !== hiddenNumber) ? `${question} ${nextValue}` : `${question} ..`;
   }
@@ -24,4 +24,4 @@ const information = () => {
 
 const brainProgression = () => originBrain(description, information);
 
-  export default brainProgression;
+export default brainProgression;
