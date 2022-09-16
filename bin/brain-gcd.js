@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console, import/extensions */
 
-import brainGcd from '../src/gsd.js';
+import brainGcd from '../src/gcd.js';
 
 brainGcd();
