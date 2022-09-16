@@ -1,4 +1,4 @@
-/* eslint-disable no-console, import/extensions */
+/* eslint-disable no-console, import/extensions, no-param-reassign */
 import random from '../randomNumber.js';
 import originBrain from '../index.js';
 

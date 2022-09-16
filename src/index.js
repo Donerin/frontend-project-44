@@ -1,4 +1,4 @@
-/* eslint-disable no-console, import/extensions */
+/* eslint-disable no-console, import/extensions, consistent-return */
 import readlineSync from 'readline-sync';
 
 const roundsCount = 3;
