@@ -1,12 +1,12 @@
 /* eslint-disable no-console, import/extensions */
 import readlineSync from 'readline-sync';
+import random from '../randomNumber.js';
 
 const brainGcd = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log('Find the greatest common divisor of given numbers.');
-  const random = (max) => Math.floor(Math.random() * max);
   const getGcd = (numberOne, numberTwo) => {
     while (numberTwo) {
       const numberSum = numberTwo;
@@ -17,8 +17,8 @@ const brainGcd = () => {
   };
 
   for (let i = 0; i < 3; i += 1) {
-    const valueOne = random(50);
-    const valueTwo = random(50);
+    const valueOne = random(1, 50);
+    const valueTwo = random(1, 50);
     console.log(`Question: ${valueOne} ${valueTwo}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const trueAnswer = getGcd(valueOne, valueTwo);
