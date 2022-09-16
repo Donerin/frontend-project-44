@@ -15,12 +15,13 @@ const originBrain = (description, information) => {
     const userAnswer = readlineSync.question('Your answer: ');
     const wrongAnswer = `${userAnswer} is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${userName}!`;
 
-    if (Number(trueAnswer) === Number(userAnswer)) {
+    if (trueAnswer === userAnswer) {
       console.log('Correct!');
     } else {
       return console.log(wrongAnswer);
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default originBrain;

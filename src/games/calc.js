@@ -23,7 +23,7 @@ const information = () => {
   const operatorArray = ['+', '-', '*'];
   const randomOperator = operatorArray[Math.floor(Math.random() * operatorArray.length)];
   const question = `${valueMax} ${randomOperator} ${valueMin}`;
-  const trueAnswer = Number(getAnswer(valueMax, valueMin, randomOperator));
+  const trueAnswer = String(getAnswer(valueMax, valueMin, randomOperator));
   return [question, trueAnswer];
 };
 
