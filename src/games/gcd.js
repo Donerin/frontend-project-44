@@ -16,7 +16,7 @@ const information = () => {
   const valueOne = random(1, 50);
   const valueTwo = random(1, 50);
   const question = `${valueOne} ${valueTwo}`;
-  const trueAnswer = getGcd(valueOne, valueTwo);
+  const trueAnswer = String(getGcd(valueOne, valueTwo));
   return [question, trueAnswer];
 };
 
