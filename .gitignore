@@ -47,4 +47,4 @@ docker-compose.yml
 .idea/
 
 # Ignore VScode
-.vscode
+/.vscode
