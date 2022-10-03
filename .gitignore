@@ -45,3 +45,6 @@ docker-compose.yml
 /coverage
 .tool-versions
 .idea/
+
+# Ignore VScode
+.vscode

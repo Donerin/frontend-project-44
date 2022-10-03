@@ -1,8 +1,8 @@
-/* eslint-disable no-console, import/extensions */
-import random from '../randomNumber.js';
-import originBrain from '../index.js';
+import getRandomNumber from '../randomNumber.js';
+import getOriginBrain from '../index.js';
 
 const description = 'What is the result of the expression?';
+const operatorArray = ['+', '-', '*'];
 
 const getAnswer = (num1, num2, operator) => {
   switch (operator) {
@@ -13,20 +13,19 @@ const getAnswer = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      return null;
+      return 'undefined operator';
   }
 };
 
-const information = () => {
-  const valueMax = random(25, 50);
-  const valueMin = random(1, 24);
-  const operatorArray = ['+', '-', '*'];
-  const randomOperator = operatorArray[Math.floor(Math.random() * operatorArray.length)];
-  const question = `${valueMax} ${randomOperator} ${valueMin}`;
-  const trueAnswer = String(getAnswer(valueMax, valueMin, randomOperator));
-  return [question, trueAnswer];
+const getInformation = () => {
+  const valueOne = getRandomNumber(25, 50);
+  const valueTwo = getRandomNumber(1, 24);
+  const randomOperator = operatorArray[getRandomNumber(0, operatorArray.length - 1)];
+  const question = `${valueOne} ${randomOperator} ${valueTwo}`;
+  const rightAnswer = String(getAnswer(valueOne, valueTwo, randomOperator));
+  return [question, rightAnswer];
 };
 
-const brainCalc = () => originBrain(description, information);
+const getBrainCalc = () => getOriginBrain(description, getInformation);
 
-export default brainCalc;
+export default getBrainCalc;

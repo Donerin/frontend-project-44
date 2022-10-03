@@ -1,11 +1,12 @@
-/* eslint-disable no-console, import/extensions */
-import random from '../randomNumber.js';
-import originBrain from '../index.js';
+import getRandomNumber from '../randomNumber.js';
+import getOriginBrain from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  if (num < 2) return true;
+  if (num < 2) 
+  return true;
+
   let flag = true;
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
@@ -16,12 +17,12 @@ const isPrime = (num) => {
   return flag;
 };
 
-const information = () => {
-  const question = random(1, 100);
-  const trueAnswer = isPrime(question) ? 'yes' : 'no';
-  return [question, trueAnswer];
+const getInformation = () => {
+  const question = getRandomNumber(1, 100);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 
-const brainPrime = () => originBrain(description, information);
+const getBrainPrime = () => getOriginBrain(description, getInformation);
 
-export default brainPrime;
+export default getBrainPrime;

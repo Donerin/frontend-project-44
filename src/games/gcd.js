@@ -1,6 +1,6 @@
-/* eslint-disable no-console, import/extensions, no-param-reassign */
-import random from '../randomNumber.js';
-import originBrain from '../index.js';
+/* eslint-disable no-param-reassign */
+import getRandomNumber from '../randomNumber.js';
+import getOriginBrain from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 const getGcd = (numberOne, numberTwo) => {
@@ -12,14 +12,14 @@ const getGcd = (numberOne, numberTwo) => {
   return numberOne;
 };
 
-const information = () => {
-  const valueOne = random(1, 50);
-  const valueTwo = random(1, 50);
+const getInformation = () => {
+  const valueOne = getRandomNumber(1, 50);
+  const valueTwo = getRandomNumber(1, 50);
   const question = `${valueOne} ${valueTwo}`;
-  const trueAnswer = String(getGcd(valueOne, valueTwo));
-  return [question, trueAnswer];
+  const rightAnswer = String(getGcd(valueOne, valueTwo));
+  return [question, rightAnswer];
 };
 
-const brainGcd = () => originBrain(description, information);
+const getBrainGcd = () => getOriginBrain(description, getInformation);
 
-export default brainGcd;
+export default getBrainGcd;

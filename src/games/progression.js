@@ -1,16 +1,15 @@
-/* eslint-disable no-console, import/extensions */
-import random from '../randomNumber.js';
-import originBrain from '../index.js';
+import getRandomNumber from '../randomNumber.js';
+import getOriginBrain from '../index.js';
 
 const description = 'What number is missing in the progression?';
 const maxLengthProgression = 10;
 const minLengthProgression = 5;
 
-const information = () => {
-  const difference = random(1, 5);
-  const headValue = random(1, 100);
-  const lengthDifference = random(minLengthProgression, maxLengthProgression);
-  const hiddenNumber = random(0, lengthDifference);
+const getInformation = () => {
+  const difference = getRandomNumber(1, 5);
+  const headValue = getRandomNumber(1, 100);
+  const lengthDifference = getRandomNumber(minLengthProgression, maxLengthProgression);
+  const hiddenNumber = getRandomNumber(0, lengthDifference);
   let question = '';
 
   for (let i = 0; i < lengthDifference; i += 1) {
@@ -18,10 +17,10 @@ const information = () => {
     question = (i !== hiddenNumber) ? `${question} ${nextValue}` : `${question} ..`;
   }
   question = question.trim();
-  const trueAnswer = String(headValue + difference * hiddenNumber);
-  return [question, trueAnswer];
+  const rightAnswer = String(headValue + difference * hiddenNumber);
+  return [question, rightAnswer];
 };
 
-const brainProgression = () => originBrain(description, information);
+const getBrainProgression = () => getOriginBrain(description, getInformation);
 
-export default brainProgression;
+export default getBrainProgression;

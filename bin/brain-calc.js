@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console, import/extensions */
 
-import brainCalc from '../src/games/calc.js';
+import getBrainCalc from '../src/games/calc.js';
 
-brainCalc();
+getBrainCalc();
