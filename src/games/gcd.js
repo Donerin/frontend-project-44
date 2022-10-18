@@ -20,6 +20,6 @@ const getInformation = () => {
   return [question, rightAnswer];
 };
 
-const getBrainGcd = () => getOriginBrain(description, getInformation);
+const playBrainGcd = () => getOriginBrain(description, getInformation);
 
-export default getBrainGcd;
+export default playBrainGcd;
