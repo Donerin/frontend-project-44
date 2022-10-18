@@ -1,17 +1,29 @@
-### Hexlet tests and linter status:
+# frontend-project-lvl1
+# **Hexlet frontend-project-lvl1: console games**
+
+
+## **Hexlet tests and linter status:**
+
 [![Actions Status](https://github.com/Donerin/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Donerin/frontend-project-44/actions)
 
-### Asciinema Brain-even
-https://asciinema.org/a/gxGRC3hm35I4Uo55O2UGvK4Dc
+## **Ascinemas**
 
-### Asciinema Brain-calc
-https://asciinema.org/a/FzbqpPfFnsLsr5Rw1Ugje3JR0
+brain-even
 
-### Asciinema Brain-gcd
-https://asciinema.org/a/hAOoUeLSvMK2rjCvkONlPJAML
+[![asciicast](https://asciinema.org/a/489844.svg)](https://asciinema.org/a/489844)
 
-### Asciinema Brain-progression
-https://asciinema.org/a/IiG8ZgUlnSHKHNNoaoxvDSew3
+brain-calc 
 
-### Asciinema Brain-prime
-https://asciinema.org/a/YHclS8GbzPnKktyPo71H285w5
+[![asciicast](https://asciinema.org/a/K3bNSToEsTHxZcbcY4jfidh92.svg)](https://asciinema.org/a/K3bNSToEsTHxZcbcY4jfidh92)
+
+brain-prog
+
+[![asciicast](https://asciinema.org/a/nUTxGGRG6p9eURF9UUsQtDUnL.svg)](https://asciinema.org/a/nUTxGGRG6p9eURF9UUsQtDUnL)
+
+brain-gcd
+
+[![asciicast](https://asciinema.org/a/TBAhPx4AbIO8bkN6ZlsruKWdr.svg)](https://asciinema.org/a/TBAhPx4AbIO8bkN6ZlsruKWdr)
+
+brain-prime
+
+[![asciicast](https://asciinema.org/a/WK80fan4S8DhUWGCNhgJQHbv1.svg)](https://asciinema.org/a/WK80fan4S8DhUWGCNhgJQHbv1)
