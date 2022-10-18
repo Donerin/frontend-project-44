@@ -14,11 +14,12 @@ const createGame = (description, createRound) => {
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (rightAnswer === userAnswer) {
-      console.log('Correct!');
-    } else {
-      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
+    if (rightAnswer !== userAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
+      return;
     }
+
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
 };
