@@ -1,11 +1,11 @@
 import getRandomNumber from '../randomNumber.js';
-import getOriginBrain from '../index.js';
+import createGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
 const maxLengthProgression = 10;
 const minLengthProgression = 5;
 
-const getInformation = () => {
+const createRound = () => {
   const difference = getRandomNumber(1, 5);
   const headValue = getRandomNumber(1, 100);
   const lengthDifference = getRandomNumber(minLengthProgression, maxLengthProgression);
@@ -21,6 +21,6 @@ const getInformation = () => {
   return [question, rightAnswer];
 };
 
-const playBrainProgression = () => getOriginBrain(description, getInformation);
+const playBrainProgression = () => createGame(description, createRound);
 
 export default playBrainProgression;
