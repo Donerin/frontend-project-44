@@ -3,16 +3,16 @@ import createGame from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrime = (num) => {
-  if (num < 2) return true;
-  let flag = true;
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) {
-      flag = false;
-      break;
+const isPrime = (number) => {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false;
     }
   }
-  return flag;
+  return true;
 };
 
 const createRound = () => {

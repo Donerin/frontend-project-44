@@ -13,7 +13,7 @@ const calculate = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      throw new Error('undefined operator');
+      throw new Error(`Undefined operator: '${operator}'!`);
   }
 };
 

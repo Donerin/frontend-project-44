@@ -4,10 +4,8 @@ import createGame from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 const getGcd = (numberOne, numberTwo) => {
-  while (numberTwo) {
-    const numberSum = numberTwo;
-    numberTwo = numberOne % numberTwo;
-    numberOne = numberSum;
+  if (numberOne % numberOne !== 0 || numberTwo % numberOne !== 0) {
+    return getGcd(numberTwo, numberOne % numberTwo);
   }
   return numberOne;
 };
