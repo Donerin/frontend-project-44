@@ -7,7 +7,7 @@ const isEven = (num) => (num % 2) === 0;
 
 const createRound = () => {
   const question = getRandomNumber(1, 50);
-  const rightAnswer = isEven(value) ? 'yes' : 'no';
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
