@@ -2,26 +2,29 @@ import getRandomNumber from '../randomNumber.js';
 import createGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
-const maxLengthProgression = 10;
-const minLengthProgression = 5;
-const generateProgression = (length, value, difference, hiddenNumber) => {
-  let question = '';
 
-  for (let i = 0; i < length; i += 1) {
-    const nextValue = value + difference * i;
-    question = (i !== hiddenNumber) ? `${question} ${nextValue}` : `${question} ..`;
+const generateProgression = (progressionStart, progressionStep, progressionLength) => {
+  const massive = [];
+  for (let i = 0; i <= progressionLength; i += 1) {
+    const result = progressionStart + (i * progressionStep);
+    massive.push(result);
   }
-  question = question.trim();
-  const rightAnswer = String(value + difference * hiddenNumber);
-  return [question, rightAnswer];
+  return massive;
 };
 
 const createRound = () => {
-  const difference = getRandomNumber(1, 5);
-  const headValue = getRandomNumber(1, 100);
-  const lengthDifference = getRandomNumber(minLengthProgression, maxLengthProgression);
-  const hiddenNumber = getRandomNumber(0, lengthDifference);
-  return generateProgression(lengthDifference, headValue, difference, hiddenNumber);
+  const firstNumber = getRandomNumber(1, 100);
+  const step = getRandomNumber(2, 10);
+  const randomLength = getRandomNumber(5, 10);
+
+  const progression = generateProgression(firstNumber, step, randomLength);
+  const randomIndex = getRandomNumber(0, progression.length - 1);
+
+  const rightAnswer = `${progression[randomIndex]}`;
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
+
+  return [question, rightAnswer];
 };
 
 const playBrainProgression = () => createGame(description, createRound);
